@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Daniel and the Solutions</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="scripts.js">
+    </script>
+
+    <script>
+        function myfunction() {
+            var x = document.getElementById("dropDown");
+            if (x.className.indexOf("w3-show") == -1)
+                x.className += "w3-show";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+        }
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="w3-top w3-hide-small">
+        <div class="w3-bar w3-blue-gray w3-card">
+            <p> <a href="index.html" class="w3-bar-item w3-button w3-black w3-padding-large">Home</a> <a href="band.html" class="w3-bar-item w3-button w3-padding-large">Travel place&nbsp;</a></p>
+            <p> <a href="tour.html" class="w3-bar-item w3-button w3-padding-large">Tour</a> <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a> </p>
+<div class="w3-dropdown-hover">
+        <button class="w3-padding-large w3-button " title="More">More
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="merch.html" class="w3-bar-item w3-button">Mercandise</a>
+                    <a href="extras.html" class="w3-bar-item w3-button">Extras</a>
+                    <a href="media.html" class="w3-bar-item w3-button">Media</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover">
+                <button class="w3-padding-large w3-button " title="Misc">Misc
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="credits.html" class="w3-bar-item w3-button">Credits</a>
+                    <a href="samples.html" class="w3-bar-item w3-button">Samples</a>
+                </div>
+            </div>
+            <a href="http://google.com.au" class="w3-padding-large w3-hover-pale-blue w3-right">
+                <i class="fa fa-search"></i></a>
+        </div>
+    </nav>
+    <!--end of large navigation code-->
+
+
+    <!--navbar on small screens-->
+    <nav class="w3-top w3-hide-medium w3-hide-large">
+        <div class="w3-bar w3-blue-gray w3-card">
+            <a href="index3.html" class="w3-bar-item w3-button w3-black w3-padding-large">HOME</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-right" href="javascript:void(0)" onclick="myfunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="dropDown" class="w3-bar-block w3-black w3-hide" style="margin-top:60px">
+                <div class="w3-bar w3-blue-gray w3-card">
+                    <!--list of dropDown elements for navigation on small screen -->
+                    <a href="band.html" class="w3-bar-item w3-button w3-padding-large">Band</a>
+                    <a href="tour.html" class="w3-bar-item w3-button w3-padding-large">Tour</a>
+                    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+                    <a href="merch.html" class="w3-bar-item w3-button w3-padding-large">Merch</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--end of small navigation code-->
+
+    <!--Start of slide show content-->
+
+
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/image01.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-deep-orange w3-padding-32 w3-hide-small">
+            <h1>css</h1>
+            <p>
+                <b>Cascading Serwrtyle Sheets</b></p>
+        </div>
+    </div>
+
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/image02.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h1>Tiger Island</h1>
+            <p>
+                <b>Swimming with the tigers</b></p>
+        </div>
+    </div>
+
+    <div class="mySlides w3-display-container w3-center">
+        <img src="images/image03.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+            <h1>Sam Tocan</h1>
+            <p>
+                <b>Loves Fruit loops</b></p>
+        </div>
+    </div>
+
+    <script>
+        var myIndex = 0; // starts at the first photo in the array when page loads
+        myCarousel(); // calls the function carousel automatically when the page is loads  
+
+        function myCarousel() {
+
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) { //loop through the array and hide all photos
+                x[i].style.display = "none";
+            }
+
+            myIndex++;
+            if (myIndex > x.length) { //check if going past last photo
+                myIndex = 1 // goes back to the first photo when reaches the end
+            }
+
+            x[myIndex - 1].style.display = "block"; // displays each photo for 4 seconds
+            setTimeout(myCarousel, 2000); //executes carousel, after waiting 4 seconds
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
